@@ -9,6 +9,16 @@
   <div class="prose">
     <h1 class="font-display">{{ page.intro_heading }}</h1>
     {{ page.intro_text|richtext }}
+    <div>
+      {% for post in posts %}
+        <div>
+          <a href="{{ post.url }}">
+            <h2 class="mb-2">{{ post.title }}</h2>
+          </a>
+          <p class="mt-2">{{ post.first_published_at }}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 

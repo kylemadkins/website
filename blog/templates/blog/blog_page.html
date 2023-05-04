@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-blogpage{% endblock %}
+
+{% block content %}
+
+<div class="m-16 max-w-[800px]">
+  <div class="prose">
+    <p><a href="/">&larr; Home</a></p>
+    <h1 class="font-display mb-2">{{ page.title }}</h1>
+    <p>{{ page.first_published_at }}</p>
+  </div>
+</div>
+{% for block in page.body %}
+  {% include_block block %}
+{% endfor %}
+
+{% endblock content %}
