@@ -522,40 +522,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -1042,10 +1008,6 @@ video {
   padding: 1.5rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1073,6 +1035,7 @@ pre[class*="language-"].line-numbers {
   padding: 3rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  line-height: 1.35;
 }
 
 @media (min-width: 768px) {
@@ -1083,10 +1046,6 @@ pre[class*="language-"].line-numbers {
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-
-  .md\:pb-0 {
-    padding-bottom: 0px;
   }
 
   .md\:pt-12 {
