@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags tz %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -15,7 +15,7 @@
           <a href="{{ post.url }}">
             <h2 class="mb-2">{{ post.title }}</h2>
           </a>
-          <p class="mt-2">{{ post.first_published_at }}</p>
+          <p class="mt-2">{{ post.first_published_at|timezone:"America/New_York" }}</p>
         </div>
       {% endfor %}
     </div>
