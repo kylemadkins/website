@@ -9,3 +9,7 @@
 .token.url {
   background-color: transparent;
 }
+
+pre[class*="language-"].line-numbers {
+  @apply p-12 text-sm m-0;
+}
