@@ -5,25 +5,22 @@
 
 {% block content %}
 
-<div class="p-6 md:p-12 max-w-[800px]">
-  <div class="prose prose-slate">
-    <h1 class="font-display">{{ page.intro_heading }}</h1>
-    {{ page.intro_text|richtext }}
-    <div>
-      {% for post in posts %}
-        <div>
-          <a href="{{ post.url }}">
-            <h2 class="mb-2">{{ post.title }}</h2>
-          </a>
-          <p class="mt-2">
-            {{ post.first_published_at|date:"F j, Y" }}
-            &bullet;
-            {{ post.read_time }}
-          </p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+<div class="p-6 md:p-12 max-w-[800px] prose md:prose-lg">
+  <h1>{{ page.intro_heading }}</h1>
+  {{ page.intro_text|richtext }}
+</div>
+<div class="p-6 md:p-12 max-w-[800px] mx-auto prose md:prose-lg">
+  <h2 class="recent-posts"><span class="recent-posts-text">Recent Posts</span></h2>
+  {% for post in posts %}
+  <a href="{{ post.url }}" class="no-underline block py-2 px-4 border-solid border-black border-[1px] mb-8">
+    <h3 class="!my-0 !mb-2">{{ post.title }}</h3>
+    <p class="!mt-2 !mb-0 font-mono">
+      {{ post.first_published_at|date:"F j, Y" }}
+      &bullet;
+      {{ post.read_time }}
+    </p>
+  </a>
+  {% endfor %}
 </div>
 
 {% endblock content %}

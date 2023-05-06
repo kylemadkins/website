@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        link: "#544ddd",
+        blue: "#315fe7",
+      },
+      fontFamily: {
+        sans: ["Karla", "sans-serif"],
+        serif: ["Young Serif", "serif"],
+        mono: ["Space Mono", "monospace"],
       },
     },
   },
