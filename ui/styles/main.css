@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.prose :where(a):not(:where([class~="not-prose"] *)),
+.prose :where(a):not(:where([class~="not-prose"] *)) h2 {
+  @apply text-link;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  @apply bg-slate-100 text-slate-700;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)):before,
+.prose :where(code):not(:where([class~="not-prose"] *)):after {
+  content: none;
+}
+
 .language-css .token.string,
 .style .token.string,
 .token.entity,

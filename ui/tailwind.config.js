@@ -2,7 +2,11 @@
 module.exports = {
   content: ["../**/templates/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        link: "#544ddd",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
