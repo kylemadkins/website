@@ -18,10 +18,10 @@ class BlogPage(Page):
     def read_time(self):
         without_tags = strip_tags_from_body(self.body)
         words = without_tags.split(" ")
-        wpm = len(words) // 300
-        if wpm > 60:
-            return f"{wpm // 60} hr, {wpm % 60} min read"
-        return f"{wpm} min read"
+        time = len(words) // 200
+        if time > 60:
+            return f"{time // 60} hr, {time % 60} min read"
+        return f"{time} min read"
 
     content_panels = Page.content_panels + [
         FieldPanel("body"),
