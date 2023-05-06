@@ -15,7 +15,11 @@
           <a href="{{ post.url }}">
             <h2 class="mb-2">{{ post.title }}</h2>
           </a>
-          <p class="mt-2">{{ post.first_published_at|timezone:"America/New_York" }}</p>
+          <p class="mt-2">
+            {{ post.first_published_at|date:"F j, Y" }}
+            &bullet;
+            {{ post.read_time }}
+          </p>
         </div>
       {% endfor %}
     </div>
