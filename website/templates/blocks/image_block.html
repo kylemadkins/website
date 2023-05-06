@@ -3,5 +3,7 @@
 <figure class="max-w-[800px] w-full h-auto px-0 py-4 md:py-8 mx-auto md:rounded-3xl">
   {% image self.image original as image %}
   <img src="{{ image.url }}" alt="{{ image.alt }}" class="md:rounded-3xl" />
-  <figcaption class="italic mt-4 px-6 text-base">{{ self.caption }}</figcaption>
+  {% if self.caption %}
+    <figcaption class="italic mt-4 px-6 text-base">{{ self.caption }}</figcaption>
+  {% endif %}
 </figure>
