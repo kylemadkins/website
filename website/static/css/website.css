@@ -1147,6 +1147,7 @@ pre[class*="language-"].line-numbers {
   font-size: 0.875rem;
   line-height: 1.25rem;
   line-height: 1.2em;
+  font-variant-ligatures: none;
 }
 
 @media (min-width: 768px) {

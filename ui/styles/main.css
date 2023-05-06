@@ -58,4 +58,5 @@ pre[class*="language-"] {
 
 pre[class*="language-"].line-numbers {
   @apply p-12 my-0 text-sm mx-auto border-0 leading-[1.2em];
+  font-variant-ligatures: none;
 }
