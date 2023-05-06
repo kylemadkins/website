@@ -2,13 +2,13 @@ from wagtail.models import Page
 from wagtail.fields import StreamField
 from wagtail.admin.panels import FieldPanel
 
-from website.blocks import ContentBlock, CodeBlock
+from website.blocks import ContentBlock, CodeBlock, ImageBlock
 from website.utils import strip_tags_from_body
 
 
 class BlogPage(Page):
     body = StreamField(
-        [("content", ContentBlock()), ("code", CodeBlock())],
+        [("content", ContentBlock()), ("code", CodeBlock()), ("image", ImageBlock())],
         null=True,
         blank=True,
         use_json_field=True,

@@ -1,4 +1,5 @@
 from wagtail import blocks
+from wagtail.images.blocks import ImageChooserBlock
 
 
 class ContentBlock(blocks.StructBlock):
@@ -31,3 +32,11 @@ class CodeBlock(blocks.StructBlock):
 
     class Meta:
         template = "blocks/code_block.html"
+
+
+class ImageBlock(blocks.StructBlock):
+    image = ImageChooserBlock()
+    caption = blocks.RichTextBlock(features=["link"])
+
+    class Meta:
+        template = "blocks/image_block.html"
