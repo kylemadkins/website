@@ -1076,16 +1076,6 @@ video {
   text-decoration-line: none;
 }
 
-@font-face {
-  font-family: "Young Serif";
-
-  src: url("../fonts/YoungSerif-Regular.woff") format("woff");
-
-  font-weight: 700;
-
-  font-style: normal;
-}
-
 .prose * {
   color: #011627;
 }
