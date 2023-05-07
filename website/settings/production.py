@@ -27,7 +27,7 @@ AWS_S3_REGION_NAME = "nyc3"
 
 AWS_S3_ENDPOINT_URL = "https://kylemadkins.nyc3.digitaloceanspaces.com"
 
-AWS_ACCESS_KEY_ID = "DO00WCZ3AT9CBMY7796W"
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
