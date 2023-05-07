@@ -1039,10 +1039,6 @@ video {
   max-width: 800px;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
 .border-\[1px\] {
   border-width: 1px;
 }
@@ -1065,6 +1061,11 @@ video {
   padding: 1.5rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1085,18 +1086,8 @@ video {
   padding-bottom: 1rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .font-mono {
   font-family: Space Mono, monospace;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-base {
@@ -1123,8 +1114,12 @@ video {
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)) {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 4px;
