@@ -2,3 +2,4 @@ Django>=4.1,<4.2
 wagtail>=4.2,<4.3
 psycopg2==2.9.6
 django-storages==1.13.2
+boto3==1.26.129
