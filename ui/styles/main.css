@@ -64,3 +64,11 @@ pre[class*="language-"].line-numbers {
 figcaption a {
   @apply text-blue underline;
 }
+
+.quote figcaption p {
+  @apply m-0;
+}
+
+.quote figcaption {
+  @apply mt-4 text-slate-500 font-light;
+}

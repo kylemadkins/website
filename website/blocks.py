@@ -40,3 +40,11 @@ class ImageBlock(blocks.StructBlock):
 
     class Meta:
         template = "blocks/image_block.html"
+
+
+class QuoteBlock(blocks.StructBlock):
+    quote = blocks.TextBlock()
+    attribution = blocks.RichTextBlock(features=["link"])
+
+    class Meta:
+        template = "blocks/quote_block.html"

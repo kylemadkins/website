@@ -1,5 +1,6 @@
 import re
 
+
 def strip_tags_from_body(body: str) -> str:
     html = str(body)
     without_tags = re.sub("<[^<]+?>", "", html)

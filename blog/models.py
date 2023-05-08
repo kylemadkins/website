@@ -1,14 +1,22 @@
+from django.db import models
+
 from wagtail.models import Page
 from wagtail.fields import StreamField
 from wagtail.admin.panels import FieldPanel
 
-from website.blocks import ContentBlock, CodeBlock, ImageBlock
+from website.blocks import ContentBlock, CodeBlock, ImageBlock, QuoteBlock
 from website.utils import strip_tags_from_body
 
 
 class BlogPage(Page):
+    subtitle = models.CharField(max_length=200, blank=True, null=True)
     body = StreamField(
-        [("content", ContentBlock()), ("code", CodeBlock()), ("image", ImageBlock())],
+        [
+            ("content", ContentBlock()),
+            ("code", CodeBlock()),
+            ("image", ImageBlock()),
+            ("quote", QuoteBlock()),
+        ],
         null=True,
         blank=True,
         use_json_field=True,
@@ -23,5 +31,6 @@ class BlogPage(Page):
         return f"{time} min read"
 
     content_panels = Page.content_panels + [
+        FieldPanel("subtitle"),
         FieldPanel("body"),
     ]
