@@ -1562,6 +1562,10 @@ video {
   width: 1.5rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .max-w-\[800px\] {
   max-width: 800px;
 }
@@ -1619,6 +1623,10 @@ video {
 
 .fill-slate-900 {
   fill: #0f172a;
+}
+
+.fill-slate-700 {
+  fill: #334155;
 }
 
 .object-cover {
