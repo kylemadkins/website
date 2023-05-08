@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags tz %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -11,15 +11,27 @@
 </div>
 <div class="p-6 md:px-0 md:py-12 max-w-[800px] mx-auto prose md:prose-lg">
   <h2 class="recent-posts"><span class="recent-posts-text">Recent Posts</span></h2>
+  <div class="container m-auto grid grid-cols-1 gap-4 md:grid-cols-2">
   {% for post in posts %}
-  <a href="{{ post.url }}" class="no-underline block py-2 px-4 border-solid border-black border-[1px] mb-8">
-    <h3 class="!my-0 !mb-2">{{ post.title }}</h3>
-    <p class="!mt-2 !mb-0 font-mono">
-      {{ post.first_published_at|date:"F j, Y" }}
-      &bullet;
-      {{ post.read_time }}
-    </p>
-  </a>
+    <a href="{{ post.url }}" class="no-underline block border-solid border-black border-[1px]">
+      <picture>
+        {% image post.featured_image format-webp as image_webp %}
+        <source srcset="{{ image_webp.url }}" type="image/webp">
+        {% image post.featured_image format-png as image_png %}
+        <source srcset="{{ image_png.url }}" type="image/png">
+        <img class="h-[280px] w-full object-cover !m-0" src="{{ image_png.url }}" alt="{{ image_png.alt }}" />
+      </picture>
+      <div class="px-4 py-6">
+        <h3 class="!my-0 !mb-2">{{ post.title }}</h3>
+        <h4 class="font-normal italic">{{ post.subtitle }}</h4>
+        <p class="!mt-2 !mb-0 font-mono text-sm !text-slate-500">
+          {{ post.first_published_at|date:"F j, Y" }}
+          &bullet;
+          {{ post.read_time }}
+        </p>
+      </div>
+    </a>
+  </div>
   {% endfor %}
 </div>
 
