@@ -31,7 +31,7 @@ class BlogPage(Page):
 
     @property
     def read_time(self):
-        words = strip_tags_from_body(self.body)
+        words = strip_tags_from_body(str(self.body))
         time = len(words) // 200
         if time > 60:
             return f"{time // 60} hr, {time % 60} min read"
