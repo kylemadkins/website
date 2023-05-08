@@ -1,17 +1,19 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags tz %}
+{% load wagtailcore_tags tz wagtailimages_tags %}
 
 {% block body_class %}template-blogpage{% endblock %}
 
 {% block content %}
 
 <div class="p-6 md:pt-12 md:pb-12 md:px-0 max-w-[800px] mx-auto prose md:prose-lg">
+  {% image self.featured_image original as image %}
+  <img class="h-[460px] w-full object-cover" src="{{ image.url }}" alt="{{ image.alt }}" />
   <p><a href="/" class="no-underline">Home</a></p>
   <h1 class="!mt-0 !mb-4">{{ page.title }}</h1>
   {% if page.subtitle %}
     <h2 class="font-light italic !my-4">{{ page.subtitle }}</h2>
   {% endif %}
-  <p class="text-sm font-mono">
+  <p class="text-sm font-mono !text-slate-500">
     {{ page.first_published_at|date:"F j, Y" }}
     &bullet;
     {{ page.read_time }}

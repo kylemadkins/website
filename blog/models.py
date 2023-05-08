@@ -9,6 +9,13 @@ from website.utils import strip_tags_from_body
 
 
 class BlogPage(Page):
+    featured_image = models.ForeignKey(
+        "wagtailimages.Image",
+        blank=False,
+        null=True,
+        related_name="+",
+        on_delete=models.SET_NULL,
+    )
     subtitle = models.CharField(max_length=200, blank=True, null=True)
     body = StreamField(
         [
@@ -31,6 +38,7 @@ class BlogPage(Page):
         return f"{time} min read"
 
     content_panels = Page.content_panels + [
+        FieldPanel("featured_image"),
         FieldPanel("subtitle"),
         FieldPanel("body"),
     ]
