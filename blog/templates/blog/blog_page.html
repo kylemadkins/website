@@ -6,8 +6,13 @@
 {% block content %}
 
 <div class="p-6 md:pt-12 md:pb-12 md:px-0 max-w-[800px] mx-auto prose md:prose-lg">
-  {% image self.featured_image original as image %}
-  <img class="h-[460px] w-full object-cover" src="{{ image.url }}" alt="{{ image.alt }}" />
+  <picture>
+    {% image page.featured_image format-webp as image_webp %}
+    <source srcset="{{ image_webp.url }}" type="image/webp">
+    {% image page.featured_image format-png as image_png %}
+    <source srcset="{{ image_png.url }}" type="image/png">
+    <img class="h-[460px] w-full object-cover" src="{{ image_png.url }}" alt="{{ image_png.alt }}" />
+  </picture>
   <p><a href="/" class="no-underline">Home</a></p>
   <h1 class="!mt-0 !mb-4">{{ page.title }}</h1>
   {% if page.subtitle %}

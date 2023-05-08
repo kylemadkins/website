@@ -1,8 +1,13 @@
 {% load wagtailimages_tags %}
 
 <figure class="max-w-[800px] w-full h-auto px-0 py-4 md:py-8 mx-auto">
-  {% image self.image original as image %}
-  <img src="{{ image.url }}" alt="{{ image.alt }}" />
+  <picture>
+    {% image self.image format-webp as image_webp %}
+    <source srcset="{{ image_webp.url }}" type="image/webp">
+    {% image self.image format-png as image_png %}
+    <source srcset="{{ image_png.url }}" type="image/png">
+    <img src="{{ image_png.url }}" alt="{{ image_png.alt }}" />
+  </picture>
   {% if self.caption %}
     <figcaption class="italic mt-4 px-6 md:px-0 text-base">{{ self.caption }}</figcaption>
   {% endif %}
