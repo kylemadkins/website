@@ -1496,6 +1496,10 @@ video {
   height: 460px;
 }
 
+.h-\[240px\] {
+  height: 240px;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -2393,6 +2397,14 @@ figcaption a {
   .md\:my-8 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .md\:aspect-auto {
+    aspect-ratio: auto;
+  }
+
+  .md\:h-\[460px\] {
+    height: 460px;
   }
 
   .md\:rounded-3xl {
