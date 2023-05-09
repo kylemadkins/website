@@ -23,9 +23,9 @@
     &bullet;
     {{ page.read_time }}
   </p>
-  <div class="flex gap-2">
+  <div class="flex gap-2 md:gap-4 mt-6">
     {% for tag in page.tags.all %}
-      <span class="text-sm inline-flex px-2 py-1 leading-none rounded-full" style="color: {{ tag.text_color }}; border: 1px solid {{ tag.border_color }}; background: {{ tag.background_color }}">{{ tag.name }}</span>
+      <span class="text-sm inline-flex px-4 py-2 leading-none rounded-full" style="color: {{ tag.text_color }}; border: 1px solid {{ tag.border_color }}; background: {{ tag.background_color }}">{{ tag.name }}</span>
     {% endfor %}
   </div>
 </div>
