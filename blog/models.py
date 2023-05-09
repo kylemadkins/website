@@ -15,10 +15,9 @@ from website.utils import strip_tags_from_body
 @register_snippet
 class BlogTag(TagBase):
     free_tagging = False
-    color = models.CharField(max_length=50, help_text="A CSS color for the tag text and border")
-    background_color = models.CharField(max_length=50, help_text="A CSS color for the tag background")
-
-    pass
+    text_color = models.CharField(max_length=50, help_text="A CSS color for the tag text", null=True, blank=True)
+    border_color = models.CharField(max_length=50, help_text="A CSS color for the tag border", null=True, blank=True)
+    background_color = models.CharField(max_length=50, help_text="A CSS color for the tag background", null=True, blank=True)
 
 
 class TaggedBlog(ItemBase):
