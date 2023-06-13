@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         sans: ["Karla", "sans-serif"],
         serif: ["Young Serif", "serif"],
-        mono: ["Space Mono", "monospace"],
+        mono: ["IntelOne Mono", "monospace"],
       },
     },
   },

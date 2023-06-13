@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "IntelOne Mono";
+  src: url("./fonts/intelone-mono-font-family-regular.woff") format("woff"),
+    url("./fonts/intelone-mono-font-family-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IntelOne Mono";
+  src: url("./fonts/intelone-mono-font-family-italic.woff") format("woff"),
+    url("./fonts/intelone-mono-font-family-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
 .prose * {
   color: #011627;
 }
