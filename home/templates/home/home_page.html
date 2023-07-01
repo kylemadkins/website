@@ -32,8 +32,9 @@
         <div class="flex flex-wrap gap-2 mt-4">
           {% for tag in post.tags.all %}
           <span class="text-sm inline-flex px-2 py-1 leading-none rounded-full"
-            style="color: {{ tag.text_color }}; border: 1px solid {{ tag.border_color }}; background: {{ tag.background_color }}">{{
-            tag.name }}</span>
+            style="color: {{ tag.text_color }}; border: 1px solid {{ tag.border_color }}; background: {{ tag.background_color }}">
+            {{ tag.name }}
+          </span>
           {% endfor %}
         </div>
       </div>
