@@ -10,7 +10,7 @@
   <source srcset="{{ image_webp.url }}" type="image/webp">
   {% image page.featured_image format-png as image_png %}
   <source srcset="{{ image_png.url }}" type="image/png">
-  <img class="max-w-[800px] mx-auto aspect-square md:aspect-auto md:h-[460px] w-full object-cover"
+  <img class="max-w-[600px] mx-auto aspect-square md:aspect-auto md:h-[460px] w-full object-cover"
     src="{{ image_png.url }}" alt="{{ image_png.alt }}" />
 </picture>
 <div class="p-6 md:pt-12 md:pb-12 md:px-0 max-w-[600px] mx-auto prose">
