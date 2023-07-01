@@ -10,13 +10,14 @@
   <source srcset="{{ image_webp.url }}" type="image/webp">
   {% image page.featured_image format-png as image_png %}
   <source srcset="{{ image_png.url }}" type="image/png">
-  <img class="max-w-[800px] mx-auto aspect-square md:aspect-auto md:h-[460px] w-full object-cover" src="{{ image_png.url }}" alt="{{ image_png.alt }}" />
+  <img class="max-w-[800px] mx-auto aspect-square md:aspect-auto md:h-[460px] w-full object-cover"
+    src="{{ image_png.url }}" alt="{{ image_png.alt }}" />
 </picture>
-<div class="p-6 md:pt-12 md:pb-12 md:px-0 max-w-[800px] mx-auto prose md:prose-lg">
+<div class="p-6 md:pt-12 md:pb-12 md:px-0 max-w-[800px] mx-auto prose">
   <p><a href="/" class="no-underline">Home</a></p>
   <h1 class="!mt-0 !mb-4">{{ page.title }}</h1>
   {% if page.subtitle %}
-    <h2 class="font-light italic !my-4">{{ page.subtitle }}</h2>
+  <h2 class="font-light italic !my-4">{{ page.subtitle }}</h2>
   {% endif %}
   <p class="text-base font-mono !text-slate-500">
     {{ page.first_published_at|date:"F j, Y" }}
@@ -25,12 +26,14 @@
   </p>
   <div class="flex flex-wrap gap-2 mt-6">
     {% for tag in page.tags.all %}
-      <span class="text-sm inline-flex px-4 py-2 leading-none rounded-full" style="color: {{ tag.text_color }}; border: 1px solid {{ tag.border_color }}; background: {{ tag.background_color }}">{{ tag.name }}</span>
+    <span class="text-sm inline-flex px-4 py-2 leading-none rounded-full"
+      style="color: {{ tag.text_color }}; border: 1px solid {{ tag.border_color }}; background: {{ tag.background_color }}">{{
+      tag.name }}</span>
     {% endfor %}
   </div>
 </div>
 {% for block in page.body %}
-  {% include_block block %}
+{% include_block block %}
 {% endfor %}
 
 {% endblock content %}
