@@ -14,13 +14,6 @@
   <div class="container m-auto grid grid-cols-1 gap-4 md:grid-cols-2">
     {% for post in posts %}
     <a href="{{ post.url }}" class="no-underline block border-solid border-black border-[1px]">
-      <picture>
-        {% image post.featured_image format-webp as image_webp %}
-        <source srcset="{{ image_webp.url }}" type="image/webp">
-        {% image post.featured_image format-png as image_png %}
-        <source srcset="{{ image_png.url }}" type="image/png">
-        <img class="h-[280px] w-full object-cover !m-0" src="{{ image_png.url }}" alt="{{ image_png.alt }}" />
-      </picture>
       <div class="px-4 py-6">
         <h3 class="!my-0 !mb-2">{{ post.title }}</h3>
         <h4 class="font-normal italic">{{ post.subtitle }}</h4>
