@@ -18,5 +18,5 @@ class HomePage(Page):
 
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
-        context["posts"] = BlogPage.objects.live().public()
+        context["posts"] = sorted(BlogPage.objects.live().public(), key=lambda p: p.first_published_at, reverse=True)
         return context
