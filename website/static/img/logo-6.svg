@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200pt" height="1200pt" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+ <path d="m300 120v60h-60v60h-60v60h-60v120h60v60h180v120h-180v60h780v120h60v60h-60v60h-60v60h-180v-60h-60v-60h60v-60h120v60h60v-60h-60v-60h-120v60h-60v60h-60v120h60v60h60v60h180v-60h60v-60h60v-60h60v-420h-60v-120h-60v-120h-60v-60h-60v-60h-240v60h-120v-60zm360 480h-120v-120h120zm300-60v60h-120v-120h60v60zm-180 60h-60v-120h60zm-300 0h-60v-120h60zm-180-240h-60v-60h60z" fill-rule="evenodd"/>
+</svg>

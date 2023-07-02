@@ -19,43 +19,21 @@
 }
 
 .prose * {
-  color: #011627;
+  color: #000;
 }
 
 .prose :where(a):not(:where([class~="not-prose"] *)),
 .prose :where(a):not(:where([class~="not-prose"] *)) h3 {
-  @apply text-blue;
+  @apply text-green-500;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)) {
-  @apply bg-slate-100 py-[0px] px-[4px] font-normal rounded border-[1px] border-slate-300;
+  @apply bg-neutral-100 py-[0px] px-[4px] font-normal rounded border-[1px] border-neutral-300;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)):before,
 .prose :where(code):not(:where([class~="not-prose"] *)):after {
   content: none;
-}
-
-.recent-posts {
-  position: relative;
-}
-
-.recent-posts-text {
-  position: relative;
-  z-index: 1;
-  background-color: #fff;
-  padding-right: 1rem;
-}
-
-.recent-posts:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 1px;
-  width: 100%;
-  background-color: #011627;
 }
 
 .language-css .token.string,
@@ -86,5 +64,5 @@ figcaption a {
 }
 
 .quote figcaption {
-  @apply mt-4 text-slate-500 font-light;
+  @apply mt-4 text-neutral-500 font-light;
 }

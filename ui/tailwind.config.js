@@ -7,9 +7,9 @@ module.exports = {
         blue: "#315fe7",
       },
       fontFamily: {
-        sans: ["Karla", "sans-serif"],
-        serif: ["Young Serif", "serif"],
-        mono: ["IntelOne Mono", "monospace"],
+        sans: ["'Karla'", "sans-serif"],
+        mono: ["'IntelOne Mono'", "monospace"],
+        display: ["'Press Start 2P'", "cursive"]
       },
     },
   },
