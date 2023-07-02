@@ -6,21 +6,20 @@
 {% block content %}
 
 <div class="p-6 md:pt-12 md:pb-12 md:px-0 max-w-[38rem] mx-auto prose">
-  <p><a href="/">Home</a></p>
-  <h1 class="!mt-0 !mb-4 font-display text-3xl">{{ page.title }}</h1>
+  <p><a href="/" class="no-underline">Home</a></p>
+  <h1 class="!mt-0 !mb-4 font-display text-lg md:text-xl">{{ page.title }}</h1>
   {% if page.subtitle %}
   <h2 class="font-light italic !my-4">{{ page.subtitle }}</h2>
   {% endif %}
-  <p class="text-base font-mono !text-neutral-500">
+  <p class="text-base font-mono !text-neutral-600">
     {{ page.first_published_at|date:"F j, Y" }}
     &bullet;
     {{ page.read_time }}
   </p>
   <div class="flex flex-wrap gap-2 mt-6">
     {% for tag in page.tags.all %}
-    <span class="text-sm inline-flex px-4 py-2 leading-none rounded-full"
-      style="color: {{ tag.text_color }}; border: 1px solid {{ tag.border_color }}; background: {{ tag.background_color }}">
-      {{ tag.name }}</span>
+    <span class="text-sm inline-flex px-2 py-1 leading-none bg-black !text-white italic">
+      #{{ tag.name }}</span>
     {% endfor %}
   </div>
 </div>
