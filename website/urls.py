@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.urls import include, path
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail import urls as wagtail_urls
@@ -13,6 +14,8 @@ urlpatterns = [
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
+    path("about/", TemplateView.as_view(template_name="about.html"), name="about"),
+    path("contact/", TemplateView.as_view(template_name="contact.html"), name="contact")
 ]
 
 

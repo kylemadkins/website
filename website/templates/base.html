@@ -37,7 +37,7 @@
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %} h-full flex flex-col justify-between">
+    <body class="{% block body_class %}{% endblock %} bg-neutral-50 h-full flex flex-col justify-between">
         <div>
             {% wagtailuserbar %}
 
@@ -45,9 +45,9 @@
                 <div class="p-6 max-w-[1200px] mx-auto md:flex md:justify-between md:items-center">
                     <a href="/"><img class="h-20" src="{% static 'img/logo.svg' %}" alt="<3" /></a>
                     <ul class="flex items-center gap-8 my-8 md:my-0">
-                        <li><a href="#" class="font-bold">About</a></li>
-                        <li><a href="#" class="font-bold">Blog</a></li>
-                        <li><a href="#" class="font-bold">Contact</a></li>
+                        <li><a href="/about" class="font-bold">About</a></li>
+                        <li><a href="/" class="font-bold">Writings</a></li>
+                        <li><a href="/contact" class="font-bold">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -55,8 +55,8 @@
             {% block content %}{% endblock %}
         </div>
 
-        <footer class="bg-neutral-50 text-center py-2 border-black border-t-[1px]">
-            Copyright &copy; {% now "Y" %}
+        <footer class="mt-24 bg-neutral-200 text-center py-2 border-black border-t-[1px]">
+            Made with ❤️ by Kyle Adkins &copy; {% now "Y" %}
         </footer>
 
         {# Global javascript #}
