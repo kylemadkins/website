@@ -81,7 +81,3 @@ figcaption a {
 .quote figcaption {
   @apply mt-4 text-neutral-500 font-light;
 }
-
-.template-blogpage {
-  word-wrap: break-word;
-}
