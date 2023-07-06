@@ -26,7 +26,13 @@
 .prose :where(a):not(:where([class~="not-prose"] *)) h3 {
   @apply no-underline;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, #38f288 60%, #38f288 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 60%,
+    #38f288 60%,
+    #38f288 100%
+  );
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)) {
@@ -59,7 +65,13 @@ pre[class*="language-"].line-numbers {
 
 figcaption a {
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, #38f288 60%, #38f288 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 60%,
+    #38f288 60%,
+    #38f288 100%
+  );
 }
 
 .quote figcaption p {
@@ -68,4 +80,8 @@ figcaption a {
 
 .quote figcaption {
   @apply mt-4 text-neutral-500 font-light;
+}
+
+.template-blogpage {
+  word-wrap: break-word;
 }
