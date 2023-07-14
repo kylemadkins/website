@@ -1,6 +1,6 @@
 {% load wagtailimages_tags %}
 
-<figure class="max-w-[38rem] w-full h-auto px-0 py-4 md:py-8 mx-auto">
+<figure class="max-w-[44rem] w-full h-auto px-0 py-4 md:py-8 mx-auto">
   <picture>
     {% image self.image format-webp as image_webp %}
     <source srcset="{{ image_webp.url }}" type="image/webp">
