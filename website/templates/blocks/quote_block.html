@@ -1,10 +1,10 @@
 {% load static %}
 
-<div class="bg-neutral-100 my-6 md:my-8">
+<div class="bg-[#6afca9] border-black border-y-[1px] my-6 md:my-8">
   <figure class="quote relative max-w-[44rem] p-6 md:py-8 mx-auto prose-lg">
-    <blockquote class="!font-light !italic border-none !p-0">
+    <blockquote class="!italic border-none !p-0">
       {{ self.quote }}
     </blockquote>
-    <figcaption>{{ self.attribution }}</figcaption>
+    <figcaption class="!text-black !font-normal">{{ self.attribution }}</figcaption>
   </figure>
 </div>

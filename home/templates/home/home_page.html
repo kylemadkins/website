@@ -6,15 +6,15 @@
 {% block content %}
 
 <div class="md:grid md:grid-cols-3 md:gap-12 p-6 md:py-24 max-w-[56rem] mx-auto prose">
-  <h2 class="mb-12 font-display text-lg md:text-xl">Recent Posts</h2>
+  <h1 class="mb-12">Recent Posts</h1>
   <div class="md:col-span-2 container flex flex-col gap-8">
     {% for post in posts %}
     <div class="border-solid border-black border-b-[1px] last-of-type:border-b-0 pb-4 md:pb-8">
-      <h3 class="my-0 mb-2"><a href="{{ post.url }}" class="no-underline">{{ post.title }}</a></h3>
+      <h2 class="mt-0 mb-4 text-xl"><a href="{{ post.url }}" class="no-underline">{{ post.title }}</a></h2>
       {% if post.subtitle %}
-      <h4 class="font-normal italic">{{ post.subtitle }}</h4>
+      <h3 class="italic text-lg font-normal">{{ post.subtitle }}</h3>
       {% endif %}
-      <p class="!mt-2 !mb-0 font-mono font-normal text-sm !text-neutral-500">
+      <p class="font-mono font-light text-sm">
         {{ post.first_published_at|date:"F j, Y" }}
         &bullet;
         {{ post.read_time }}

@@ -18,6 +18,14 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "IntelOne Mono";
+  src: url("./fonts/intelone-mono-font-family-light.woff") format("woff"),
+    url("./fonts/intelone-mono-font-family-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
 .prose * {
   color: #000;
 }
