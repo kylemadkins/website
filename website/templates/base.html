@@ -37,7 +37,7 @@
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %} bg-neutral-50 h-full flex flex-col justify-between">
+    <body class="{% block body_class %}{% endblock %} h-full flex flex-col justify-between">
         <div>
             {% wagtailuserbar %}
 
@@ -55,7 +55,7 @@
             {% block content %}{% endblock %}
         </div>
 
-        <footer class="mt-24 bg-neutral-200 text-center py-2 border-black border-t-[1px]">
+        <footer class="mt-24 bg-neutral-100 text-center py-2">
             Made with ❤️ by Kyle Adkins &copy; {% now "Y" %}
         </footer>
 
