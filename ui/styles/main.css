@@ -44,7 +44,7 @@
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)) {
-  @apply bg-white py-[0px] px-[4px] font-normal border-[1px] border-neutral-500;
+  @apply bg-white py-[0px] px-[4px] font-normal border-[1px] border-neutral-300;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)):before,
